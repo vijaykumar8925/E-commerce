@@ -24,6 +24,7 @@ export function DashboardReview ({values,edit,button}) {
                      <h5 style={{color:'#2557a7',textAlign:'right'}} onClick={() => {
                         values(true)
                         button(false)
+                        edit(false)
                      }}>Edit</h5>
                   </Col>
                </Row>
@@ -259,6 +260,9 @@ export function DashboardNext ({message,update}) {
          setIncrement(true)
     }
 
+
+   console.log(localStorage.getItem('valuesHide'))
+
     const editShow = (val) => {
          setHide(val)
          setEditImage(val)
@@ -269,6 +273,7 @@ export function DashboardNext ({message,update}) {
    localStorage.setItem('discounts',productDetails.discounts)
 
 console.log(details.image)
+
 
    return(
       <div>
@@ -733,13 +738,15 @@ export default function AppSellersDashboard () {
          setHide(val)
     }
 
-    let values = true
+    const[summa,setSumma] = useState('')
 
-    const handleUpdate = () => {
+    localStorage.setItem('valuesHide',summa)
+
+    const handleUpdate =  () => {
+      
       setHide(false)
     }
-
-
+    
     return(
         <div className='sellerdashboard'>
              <Container style={{padding:'0'}} fluid >
