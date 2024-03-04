@@ -10,7 +10,7 @@ import { useState , useEffect } from 'react';
 import { FiPlusCircle } from "react-icons/fi";
 import { CiCircleMinus } from "react-icons/ci";
 
-export function DashboardReview ({values,edit}) {
+export function DashboardReview ({values,edit,button}) {
    return(
       <div className='mt-4'>
          <Row>
@@ -23,6 +23,7 @@ export function DashboardReview ({values,edit}) {
                   <Col lg={6}>
                      <h5 style={{color:'#2557a7',textAlign:'right'}} onClick={() => {
                         values(true)
+                        button(false)
                      }}>Edit</h5>
                   </Col>
                </Row>
@@ -170,7 +171,7 @@ export function DashboardReview ({values,edit}) {
 }
 
 
-export function DashboardNext ({message}) {
+export function DashboardNext ({message,update}) {
 
    const discountArray = []
   
@@ -370,7 +371,7 @@ console.log(details.image)
               <Row>
                 <Col lg={12}>
                   {
-                     editImage ? 
+                     editImage && localStorage.getItem('image') != '' ? 
                      <>
                      <label>Product Image</label>
                         <div style={{padding:'10px'}} className='mb-2'>
@@ -477,7 +478,7 @@ console.log(details.image)
              <Row>
                 <Col lg={12}>
                   {
-                     editImage ?  <>
+                     editImage && localStorage.getItem('image1') != '' ?  <>
                      <label>Product Image</label>
                         <div style={{padding:'10px'}} className='mb-2'>
                         <label  style={{fontSize:'20px'}} htmlFor="filePicker" >{details.image1 ? details.image1 : 'Choose File'}
@@ -587,7 +588,7 @@ console.log(details.image)
              <Row>
                 <Col lg={12}>
                   {
-                     editImage ? 
+                     editImage && localStorage.getItem('image3') != '' ? 
                      <>
                      <label>Product Image</label>
                         <div style={{padding:'10px'}} className='mb-2'>
@@ -680,7 +681,7 @@ console.log(details.image)
           </div>
                                         </Col>
                                         <Col lg={2}></Col>
-            </Row> : <DashboardReview values={message} edit={editShow}/>
+            </Row> : <DashboardReview values={message} edit={editShow} button={update}/>
          }
        
       </div>
@@ -706,8 +707,16 @@ export default function AppSellersDashboard () {
       currentPlace : ''
     })
 
+    const [update,setUpdate] = useState(true)
 
-    const [value,setValue] = useState(false)
+    const updateButton = (val) => {
+         setUpdate(val)
+    }
+
+
+    const [value,setValue] = useState(true)
+
+
 
     localStorage.setItem('brand',state.brand);
       localStorage.setItem('productName',state.productName)
@@ -724,7 +733,12 @@ export default function AppSellersDashboard () {
          setHide(val)
     }
 
-    
+    let values = true
+
+    const handleUpdate = () => {
+      setHide(false)
+    }
+
 
     return(
         <div className='sellerdashboard'>
@@ -739,6 +753,7 @@ export default function AppSellersDashboard () {
                         <div className='dash-second'>
                              <div className='dashboard-inputs' style={{textAlign:'center'}}>
                                   <img onClick={handleClick} src={img2}/>
+                                  
                                   {
                                        hide ?
                                        <Row>
@@ -862,12 +877,15 @@ export default function AppSellersDashboard () {
         }} type="text" placeholder="name@example.com" />
       </Form.Group>
       <div style={{textAlign:'right'}}>
-      <button onClick={handleNexttab} style={{border:'none',backgroundColor:'#007FFF',color:'white',width:'70px',height:'30px',borderRadius:'5px'}}>Next</button>
+         {
+             update ?       <button onClick={handleNexttab} style={{border:'none',backgroundColor:'#007FFF',color:'white',width:'70px',height:'30px',borderRadius:'5px'}}>Next</button>
+           :  <button onClick={handleUpdate} style={{border:'none',backgroundColor:'#007FFF',color:'white',width:'70px',height:'30px',borderRadius:'5px'}}>Update</button>
+         }
       </div>
                                     </Col>
                                     <Col lg={2}></Col>
                                   </Row> :
-                                  <DashboardNext message={childToParent}/>
+                                  <DashboardNext message={childToParent} update={updateButton}/>
                                   }
                                   
                              </div>
