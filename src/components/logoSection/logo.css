@@ -1,0 +1,44 @@
+.naan img{
+    width: 80px;
+    height: 80px;
+}
+
+
+
+.naan .row{
+    padding: 70px 230px;
+}
+
+.support-wrap{
+    display: flex;
+    gap: 20px;
+}
+
+.support-content{
+    text-align: left;
+}
+
+.support-wrap .support-content h5 {
+    font-size: 18px;
+    margin: 0 0 5px;
+    padding-top: 10px;
+}
+
+.support-wrap .support-content p {
+    color: #666;
+    margin: 0;
+}
+
+.support-wrap:hover .supported-icon img.rise-shake{
+    animation: jump-shaking 0.83s;
+}
+
+@keyframes jump-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateY(-9px) }
+    35% { transform: translateY(-9px) rotate(17deg) }
+    55% { transform: translateY(-9px) rotate(-17deg) }
+    65% { transform: translateY(-9px) rotate(17deg) }
+    75% { transform: translateY(-9px) rotate(-17deg) }
+    100% { transform: translateY(0) rotate(0) }
+  }

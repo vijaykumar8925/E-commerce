@@ -1,0 +1,72 @@
+/* .sellerdashboard{
+    height: 100vh;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.dash-height{
+    height: 100vh;
+    width: 100%;
+}
+
+.dashboardbuy img{
+    width: 100%;
+    height: 100vh;
+}
+
+.dash-second{
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.dashboard-inputs{
+    margin-top: 100px;
+}
+
+.dashboard-tab{
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,.1);
+    margin: 40px;
+    text-align: left;
+    border-radius: 5px;
+    padding:60px;
+}
+
+.product1{
+  box-shadow: 0 0 6px rgba(0,0,0,.1);
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.product2{
+  box-shadow: 0 0 6px rgba(0,0,0,.1);
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.product1 p{
+  font-family: "Nunito", sans-serif;
+}
+
+.product2 p{
+  font-family: "Nunito", sans-serif;
+}
+
+.sub-edits{
+  border-top: .1px solid rgba(0,0,0,.1);
+}
+
+th{
+  padding: 5px;
+}
+td{
+  text-align: center;
+}
+  
+  
+  
+

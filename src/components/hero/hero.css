@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Quicksand:wght@300..700&display=swap');
+.testimonials-block {
+    background-position: 50% 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #f0e0ff;
+    position: relative; 
+    color: #fff;
+  }
+  
+  .testimonials-block .title-holder{
+    font-family: "Merriweather", serif;
+    padding-bottom: 30px;
+  }
+  
+  .testimonials-block:before {
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .testimonials-block .container-fluid {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    }
+  
+  .testimonials-block .subtitle {
+    color: #cccccc;
+  }
+  
+  .testimonials-block blockquote {
+    border: 0;
+    text-align: center;
+    margin: 0;
+    padding: 0 0 10%;
+  }
+  
+  .testimonials-block cite {
+    font-style: normal;
+    padding: 15px 0 0;
+    display: block;
+  }
+  
+  .testimonials-block cite span {
+    display: block;
+  }
+  
+  .testimonials-block .name {
+    margin: 0;
+    text-transform: uppercase;
+    padding-top: 30px;
+  }
+  
+  .testimonials-block .name:before {
+    content: '-';
+    margin: 0 5px 0 0;
+  }
+  
+  .testimonials-block .designation {
+    font-size: 14px;
+  }
+  
+  .testimonials-block .carousel-indicators button {
+    border: 0;
+  }
+  
+  .testimonials-block .carousel-indicators .active {
+    background:#838383;
+  }
+  
+  .testimonials-block p {
+    font-family: serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+  }
+
+  .testimonials-block img{
+    height: 600px;
+  }
+
+  .testimonials-block .carousel-indicators{
+    display: none;
+  }
+
+  .testimonials-block .title{
+    margin-top: 150px;
+  }
+
+  .testimonials-block .offer h3{
+    font-size: 72px;
+     font-family: "Poppins", sans-serif;
+     font-weight: 400;
+     padding-bottom: 20px;
+  }
+
+  .carousel-parent{
+    text-align: left;
+  }
+
+.carousel-parent .carousel-button a{
+  border: 1px solid #333;
+  color: #010101;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  padding: 19px 50px 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to left, #f0e0ff 50%, #a749ff 50%) right;
+  background-size: 200%;
+  transition: .5s ease-out;
+}
+
+.carousel-parent .carousel-button a:hover{
+  background-position: left;
+  color: white;
+  border: none;
+}
+
+.carousel-parent .img{
+  background-image: url('./e-commerce-1-removebg-preview.png');
+}
+
+.carousel-parent,.img{
+  animation: fade-in-move-down 2s;
+}
+
+@keyframes fade-in-move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(30rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title{
+  animation: fade-in-move-down .5s;
+}
+
+@keyframes fade-in-move-down {
+  0% {
+    opacity: 0;
+    transform: translateY(30rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-control-prev-icon{
+  background-image: url('./2553788-200.png');
+  display: none;
+}
+
+
+.carousel-control-next-icon{
+  background-image: url('./next-16.png');
+  width: 3rem;
+  height: 3rem;
+  display: none;
+}
+
+.carousel-control-next-icon{
+  display: none !important;
+}
+
+#testimonials:hover .carousel-control-prev-icon{
+  display: block;
+}
+
+#testimonials:hover .carousel-control-next-icon{
+  display: block !important;
+}
+
+
+
+
+
